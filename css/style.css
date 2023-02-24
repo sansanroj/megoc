@@ -1,0 +1,303 @@
+@charset "utf-8";
+
+/*GENERAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+
+}
+
+body {
+  margin: 0 auto;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/****************/
+/* VISTA MOVIL */
+/****************/
+
+/*HEADER*/
+
+header {
+  margin: 0 auto;
+  height: 22vh;
+  background-image: url("../img/cabecera.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+div#logo img {
+  width: 200px;
+  transition: width 2s;
+}
+
+div#language {
+
+  position: relative;
+  margin-top: 10px;
+  margin-left: 20%;
+  z-index: 0;
+}
+
+
+/*BARRA DE LENGUAJE*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 150px;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li ul {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  display: none;
+}
+
+ul li a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0;
+  font-variant: small-caps;
+}
+
+* html ul li {
+  float: left;
+  height: 1%;
+}
+
+* html ul li a {
+  height: 1%;
+}
+
+ul li a:hover {
+  color: #e2ab14;
+}
+
+li ul li a {
+  padding: 0;
+}
+
+li:hover ul,
+li.over ul {
+  display: block;
+}
+
+/*BARRA DE NAVEGACIÓN HAMBURGUESA*/
+
+.respmenu a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 2px solid #6e6e6e;
+  max-width: 200px;
+  background: #000000;
+  font-variant: small-caps;
+  text-shadow: 1px 1px black;
+}
+
+.respmenu input[type="checkbox"],
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.respmenu {
+  color: white;
+
+}
+
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked~nav {
+  display: block;
+}
+
+.respmenu input:checked~.fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked)~.fa-times {
+  display: none;
+}
+
+/*FOOTER*/
+footer {
+  background-color: antiquewhite;
+  color: rgb(194, 154, 80);
+  height: 200px;
+  text-align: center;
+  line-height: 30px;
+  text-shadow: 1px rgb(126, 125, 125);
+  font-variant: small-caps;
+}
+
+footer a {
+  color: rgb(194, 154, 80);
+}
+
+footer a i {
+  font-size: 50px;
+  margin: 10px;
+  color: rgb(194, 154, 80);
+  transition: color 2s;
+}
+
+footer a:hover {
+  color: rgb(129, 102, 51);
+
+}
+
+body>footer>div>a:nth-child(1)>i:hover {
+  color: rgb(70, 150, 255);
+}
+
+body>footer>div>a:nth-child(2)>i:hover {
+  color: red;
+}
+
+body>footer>div>a:nth-child(3)>i:hover {
+  color: rgb(6, 177, 0);
+}
+
+body>footer>div>a:nth-child(4)>i:hover {
+  color: rgb(21, 208, 241);
+}
+
+/*MENÚ VISTA PC DESACTIVADO*/
+nav.respmenu2 {
+  display: none;
+}
+
+
+
+
+/****************/
+/* VISTA TABLET */
+/****************/
+
+@media (min-width: 768px) {
+
+  /*BODY*/
+  body {
+    margin: 0 auto;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+  /*ANIMACIÓN LOGO DE LA CABECERA*/
+
+  div#logo img:hover {
+    width: 300px;
+  }
+
+  /*LENGUAJE*/
+  div#language {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 87%;
+    z-index: 0;
+  }
+
+  /*BARRA DE NAVEGACIÓN*/
+  div.respmenu {
+    /*desactivamos el menú hamburguesa*/
+    display: none;
+  }
+
+  nav.respmenu2 {
+    display: block;
+    background-color: antiquewhite;
+    min-height: 48px;
+    width: 100%;
+    box-shadow: 0px 0px 2px gray;
+  }
+
+  nav.respmenu2 ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  nav.respmenu2 ul li {
+    margin: 20px;
+  }
+
+  nav.respmenu2 ul li a {
+    display: block;
+    padding-right: 30px;
+    color: rgb(0, 0, 0);
+    font-variant: small-caps;
+    transition: color 2s;
+  }
+
+  nav.respmenu2 ul li a:hover {
+    color: #e2ab14;
+  }
+
+  /*FOOTER*/
+  footer {
+    display: flex;
+    margin: 0 auto;
+    line-height: 40px;
+    justify-content: space-around;
+  }
+
+  div#avisofoo {
+    margin-top: 70px;
+  }
+
+  div#textofoo {
+
+    margin-top: 70px;
+  }
+
+  div#redesfoo {
+    margin-top: 70px;
+  }
+
+  footer a i {
+    font-size: 50px;
+    margin: 10px;
+    color: rgb(194, 154, 80);
+  }
+}

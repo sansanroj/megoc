@@ -1,0 +1,31 @@
+@charset "utf-8";
+/****************/
+/* VISTA MOVIL */
+/****************/
+
+/*MAIN*/
+main#main{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main#main h1{
+    font-size: 3em;
+    color: rgb(194, 154, 80);
+    text-decoration: underline;
+    margin-bottom: 10px
+}
+
+
+/****************/
+/* VISTA TABLET */
+/****************/
+@media (min-width:768px){
+
+    /*MAIN*/
+    main#main{
+        width: 80%;
+    }
+}

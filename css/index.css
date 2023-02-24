@@ -1,0 +1,121 @@
+@charset "utf-8";
+/****************/
+/* VISTA MOVIL */
+/****************/
+
+/*CARRUSEL DE IMÁGENES*/
+.carrousel {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.conteCarrousel {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.itemCarrousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.itemCarrouselTarjeta {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemCarrouselArrows {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.itemCarrouselArrows>i:hover {
+  cursor: pointer;
+}
+
+.itemCarrouselArrows>a>i {
+  color: rgb(0, 0, 0);
+}
+
+.itemCarrouselTarjeta img {
+  width: 500px;
+  border-radius: 10px;
+  line-height: 600px;
+  text-align: center;
+}
+
+/*QUI SOM*/
+div#quisom {
+  margin: 20px;
+  padding: 20px;
+}
+
+div#quisom h3 {
+  font-size: 3em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(194, 154, 80);
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+div#quisom p {
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+/****************/
+/* VISTA TABLET */
+/****************/
+@media (min-width: 768px) {
+
+  /*CARROUSEL*/
+  div.carrousel {
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  /*MAIN*/
+  main#main {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  main#main>* {
+    flex-basis: 100%;
+  }
+
+  main#main:first-child {
+    flex-grow: 2;
+  }
+
+  main#main:last-child {
+    flex-grow: 1;
+  }
+
+  div#quisom {
+    display: grid;
+    place-content: center;
+    padding: 30px;
+  }
+
+}

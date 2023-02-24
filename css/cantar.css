@@ -1,0 +1,94 @@
+@charset "utf-8";
+/****************/
+/* VISTA MOVIL */
+/****************/
+
+/*MAIN*/
+main#main {
+  width: 100%;
+}
+
+div#cantar h1 {
+  color: rgb(194, 154, 80);
+  font-size: 3em;
+  text-decoration: underline;
+  margin: 20px;
+  margin-bottom: 10px;
+}
+
+div#cantar p {
+  margin: 20px;
+  padding: 20px;
+  font-size: 1.2em;
+  margin-bottom: 0px;
+}
+
+/*FORMULARIO*/
+main div#formulario p:first-child {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  margin-bottom: 0px;
+  font-size: 1.2em;
+}
+
+form {
+  padding-top: 0px;
+  text-align: left;
+  padding: 20px;
+  line-height: 35px;
+}
+
+form p {
+  margin: 5px;
+  font-size: 1.2em;
+}
+
+legend {
+  font-size: 1.2em;
+}
+
+
+/****************/
+/* VISTA TABLET */
+/****************/
+@media (min-width:768px) {
+
+  /*MAIN*/
+  main#main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  div#cantar h1 {
+    color: rgb(194, 154, 80);
+    font-size: 3em;
+    text-decoration: underline;
+    margin: 20px;
+    margin-bottom: 10px;
+  }
+
+  div#cantar p {
+    margin: 30px;
+    padding: 20px;
+    margin-bottom: 0px;
+  }
+
+  /*FORMULARIO*/
+  div#formulario {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  form {
+    padding-top: 0px;
+    text-align: left;
+    padding: 30px;
+    line-height: 35px;
+  }
+
+  form p {
+    margin: 5px;
+    padding-left: 80px;
+  }
+}
